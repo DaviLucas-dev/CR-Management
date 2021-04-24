@@ -32,7 +32,7 @@ const PgInicial = (props) => {
                 </BotaoControlesAtualizados>  
 
                 <BotaoControlesAtualizar>
-                    <p style={{textAlign: "center", fontWeight: "bolder",}}>Controles Atualizar:<hr/></p>
+                    <p style={{textAlign: "center", fontWeight: "bolder",}}>Controles Para Atualizar:<hr/></p>
                     <p/>
                     &nbsp;&nbsp;&nbsp;<i class="fa fa-exclamation-triangle fa-4x" aria-hidden="true" style={{color: "#FFD800"}}></i>
                     <i style={{float: "right", fontSize: "40px", fontWeight: "bolder"}}>8&nbsp;&nbsp;</i>
