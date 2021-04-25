@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BotaoControlesAtualizados, BotaoControlesAtualizar, BotaoControlesAtrasados } from '../../shared/template/Botoes';
+import { BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoUserMenu, BotaoControlesAtualizados, BotaoControlesAtualizar, BotaoControlesAtrasados } from '../../shared/template/Botoes';
 
 const PgInicial = (props) => {
     
@@ -21,6 +21,8 @@ const PgInicial = (props) => {
 
     return (
         <div style={{ width: "90%", height: "90%", backgroundColor:""}}>
+
+        <BotaoUserMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></BotaoUserMenu>
 
             <div id="CardsControles" style={{ width: "100%", height: "27%", backgroundColor:"", display: "flex"}}>
 
