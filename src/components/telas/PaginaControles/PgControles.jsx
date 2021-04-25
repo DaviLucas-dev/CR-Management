@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoUserMenu } from '../../shared/template/Botoes';
+import { BotaoPerfilUsuario, BotaoNotifiUsuario } from '../../shared/template/Botoes';
+import { DivConteudo, DivUsersMenu } from '../../shared/template/Divs'
 
 const PgControles = props => {
     
@@ -21,12 +22,12 @@ const PgControles = props => {
 
     return (
 
-        <div style={{ width: "90%", height: "90%", backgroundColor:""}}>
+        <DivConteudo>
 
-            <BotaoUserMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></BotaoUserMenu>
+            <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
             <h2>Aqui vai ficar todos os controles da divisao</h2>
 
-        </div>
+        </DivConteudo>
 
     )
 }
