@@ -6,7 +6,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import PopupVisualizarRisco from '../../shared/PopUps/Riscos/PopUpVisualizarRisco';
 import PopupEditarRisco from '../../shared/PopUps/Riscos/PopUpEditarRisco';
 import PopupDeletarRisco from '../../shared/PopUps/Riscos/PopUpDeletarRisco';
-import { BotaoNovoRisco, BotaoEditarRisco, BotaoVisualizarRisco, BotaoDeletarRisco, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
+import { BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoUserMenu, BotaoNovoRisco, BotaoEditarRisco, BotaoVisualizarRisco, BotaoDeletarRisco, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
 import { columnsRiscos, rowsRiscos, testeLoad } from '../../scripts/PaginaRiscos/CarregaTabelaRiscos';
 import { columnsControlesRisco, rowsControlesRiscos } from '../../scripts/PaginaRiscos/CarregaTabelaControlesDoRisco';
 
@@ -200,7 +200,8 @@ function abrirDeletar() {
         
         
         <div style={{ width: "90%", height: "90%", backgroundColor:""}}>
-
+        
+         <BotaoUserMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></BotaoUserMenu>
          <BotaoNovoRisco onClick={() => setOpenPopup(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-plus" aria-hidden="true"></i> Novo Risco </BotaoNovoRisco>&nbsp;&nbsp;&nbsp;&nbsp;
          <BotaoEditarRisco onClick={() => abrirEditar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-pencil" aria-hidden="true"></i> Editar Risco </BotaoEditarRisco>&nbsp;&nbsp;&nbsp;&nbsp;
          <BotaoDeletarRisco onClick={() => abrirDeletar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-trash" aria-hidden="true"></i> Deletar Risco </BotaoDeletarRisco>&nbsp;&nbsp;&nbsp;&nbsp;

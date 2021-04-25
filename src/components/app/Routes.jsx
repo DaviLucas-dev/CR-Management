@@ -22,7 +22,6 @@ import Nav from '../shared/template/Nav'
 import SideNav from '../shared/template/SideNav'
 import Toolbar from '../shared/template/Toolbar'
 import TopNav from '../shared/template/TopNav'
-import { BotaoPerfilUsuario, BotaoNotifiUsuario } from '../shared/template/Botoes'
 
 //--------- Fim Layout ----------
 
@@ -112,11 +111,7 @@ const RoutesApp = (props) => {
                 <h1><i class="fa fa-exclamation-triangle" aria-hidden="true" style={{color: "#C30006"}}></i> CR - Management</h1>
             </Header>
             <Toolbar>
-
                 <QualTela/>
-                <BotaoPerfilUsuario><i  class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario>
-                <BotaoNotifiUsuario><i  class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></BotaoNotifiUsuario>
-                
             </Toolbar>
             <BrowserRouter>
                 <TopNav>
