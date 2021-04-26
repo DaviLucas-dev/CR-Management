@@ -71,7 +71,6 @@ const PgRiscos = props => {
 
 //-------------------------------------------- Consts de Controle ---------------------------------
 
-    const [mostraTabelaControles, setMostraTabelaControles] = useState(false)
     const [mostraMenu, setmostraMenu] = useState(false)
 
 //-------------------------------------------------------------------------------------------------
@@ -133,7 +132,6 @@ function CustomToolbar() {
 function fecharVisualizar() {
 
     setOpenPopupVisualizar(false);
-    setMostraTabelaControles(false);
 
 }
 
@@ -148,7 +146,6 @@ function abrirVisualizar() {
         setCriticidadeRisco(itemSelecionado['nivel']);
 
         setOpenPopupVisualizar(true);
-        setMostraTabelaControles(true);
 
     } catch (error) {
 
@@ -300,15 +297,13 @@ function abrirDeletar() {
                 <label for="fname" style={{ fontWeight: "bold"}}>Controles do risco: </label>
                 <p/>
 
-                {mostraTabelaControles
+                
 
-                    ?   <div style={{ height: 250, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
-                            <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} density={'compact'} headerHeight={30} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = JSON.parse(e.data)}/>
-                        </div>
+                <div style={{ height: 250, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
+                    <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} density={'compact'} headerHeight={30} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = JSON.parse(e.data)}/>
+                </div>
 
-                    :   <i class="fa fa-spinner fa-pulse fa-3x fa-fw" style={{ alignContent: "center" }} ></i>
-                        
-                }
+                
 
                 <p/>
 
