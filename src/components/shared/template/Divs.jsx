@@ -14,51 +14,42 @@ width: 89px;
 height: 5%;
 cursor: default;
 margin-left: 70%;
-margin-top: -6%;
+margin-top: -73px;
 display: flex;
 
 @media (max-width: 1250px)
 {
     margin-left: 69%;
-    margin-top: -6.3%;
 }
 
 @media (max-width: 1190px)
-{
-    
+{  
     margin-left: 68%;
-    margin-top: -6.4%;
 }
 
 @media (max-width: 1130px)
-{
-    
+{ 
     margin-left: 67%;
-    margin-top: -6.7%;
 }
 
 @media (max-width: 1080px)
 {
     margin-left: 66%;
-    margin-top: -7.1%;
 }
 
 @media (max-width: 1060px)
 {
     margin-left: 65%;
-    margin-top: -7.4%;
 }
 
 @media (max-width: 1020px)
 {
     margin-left: 64%;
-    margin-top: -7.6%;
 }
 
 @media (max-width: 1000px)
 {
     margin-left: 63%;
-    margin-top: -7.7%;
 }
 
 @media (max-width: 980px)
@@ -69,87 +60,100 @@ display: flex;
 @media (max-width: 950px)
 {
     margin-left: 61%;
-    margin-top: -7.9%;
 }
 
 @media (max-width: 920px)
 {
     
     margin-left: 60%;
-    margin-top: -8.4%;
 }
 
 @media (max-width: 890px)
 {
     margin-left: 59%;
-    margin-top: -8.7%;
 }
 
 @media (max-width: 860px)
 {
     margin-left: 58%;
-    margin-top: -8.9%;
 }
 
 @media (max-width: 830px)
 {
     margin-left: 57%;
-    margin-top: -9.3%;
 }
 
 @media (max-width: 800px)
 {
     margin-left: 82%;
-    margin-top: -9.6%;
-}
-
-@media (max-width: 760px)
-{
-    margin-top: -9.8%;
 }
 
 @media (max-width: 700px)
 {
     
     margin-left: 80%;
-    margin-top: -11.2%;
 }
 
 @media (max-width: 660px)
 {
     margin-left: 80%;
-    margin-top: -11.7%;
 }
 
 @media (max-width: 620px)
 {
     margin-left: 79%;
-    margin-top: -12.7%;
 }
 
 @media (max-width: 590px)
 {
     margin-left: 77%;
-    margin-top: -13%;
 }
 
 @media (max-width: 550px)
 {
     margin-left: 77%;
-    margin-top: -13.5%;
 }
 
 @media (max-width: 520px)
 {
     margin-left: 75%;
-    margin-top: -14.3%;
 }
 
 @media (max-width: 490px)
 {
     margin-left: 75%;
-    margin-top: -15.3%;
 }
 
+`
+
+export const DivOpcoesUsuario = styled.div`
+
+    margin: 0 auto;
+    background: linear-gradient(-45deg, #428AFF, #5250D8);
+    font-family: 'open sans';
+    font-size: 0.85em;
+    line-height: 1.6em;  
+    border-radius: 10px;
+    opacity: 0.95;
+    width: 160px;
+    height: 140px;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    margin-left: 62%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+    :after{ 
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        background: linear-gradient(-45deg, #428AFF, #5250D8);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 9px solid #00F900;
+        top: -9px;
+        left: 75%;
+    }
 
 `

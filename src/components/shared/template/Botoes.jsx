@@ -12,7 +12,7 @@ transition: 0.2 ease-out;
     background: #1AAB03;
     transition: 0.2s ease-out;
     cursor: pointer;
-    boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 `
@@ -199,5 +199,56 @@ transition: all .3s ease-in-out;
 
 `
 
+export const BotaoMenuTopo = styled.div`
+color: white;
+background: transparent;
+width: 125%;
+margin-left: -12%;
+height: 45px;
+margin-top: -20px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+display: flex;
+align-items: center;
+cursor: pointer;
 
+&:hover {
+    background: rgba(214,214,214, 0.5);
 
+}
+
+`
+
+export const BotaoMenuMeio = styled.div`
+color: white;
+background: transparent;
+width: 125%;
+margin-left: -12%;
+height: 45px;
+display: flex;
+align-items: center;
+cursor: pointer;
+
+&:hover {
+    background: rgba(214,214,214, 0.5);
+}
+
+`
+
+export const BotaoMenuBase = styled.div`
+color: white;
+background: transparent;
+width: 125%;
+margin-left: -12%;
+height: 45px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+display: flex;
+align-items: center;
+cursor: pointer;
+
+&:hover {
+    background: rgba(255,0,0, 0.5);;
+}
+
+`
