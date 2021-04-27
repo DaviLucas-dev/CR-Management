@@ -6,7 +6,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import PopupVisualizarRisco from '../../shared/PopUps/Riscos/PopUpVisualizarRisco';
 import PopupEditarRisco from '../../shared/PopUps/Riscos/PopUpEditarRisco';
 import PopupDeletarRisco from '../../shared/PopUps/Riscos/PopUpDeletarRisco';
-import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoNovoRisco, BotaoEditarRisco, BotaoVisualizarRisco, BotaoDeletarRisco, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
+import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoNovoItem, BotaoEditarItem, BotaoVisualizarItem, BotaoDeletarItem, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
 import { DivConteudo, DivUsersMenu, DivOpcoesUsuario } from '../../shared/template/Divs'
 import { columnsRiscos, rowsRiscos, testeLoad } from '../../scripts/PaginaRiscos/CarregaTabelaRiscos';
 import { columnsControlesRisco, rowsControlesRiscos } from '../../scripts/PaginaRiscos/CarregaTabelaControlesDoRisco';
@@ -211,10 +211,10 @@ function abrirDeletar() {
         <DivConteudo>
         
          <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario onClick={() => AbrirMenuDoUsuario(true)}><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
-         <BotaoNovoRisco onClick={() => setOpenPopup(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-plus" aria-hidden="true"></i> Novo Risco </BotaoNovoRisco>&nbsp;&nbsp;&nbsp;&nbsp;
-         <BotaoEditarRisco onClick={() => abrirEditar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-pencil" aria-hidden="true"></i> Editar Risco </BotaoEditarRisco>&nbsp;&nbsp;&nbsp;&nbsp;
-         <BotaoDeletarRisco onClick={() => abrirDeletar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-trash" aria-hidden="true"></i> Deletar Risco </BotaoDeletarRisco>&nbsp;&nbsp;&nbsp;&nbsp;
-         <BotaoVisualizarRisco onClick={() => abrirVisualizar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> <i class="fa fa-eye " aria-hidden="true"></i> Visualizar Risco </BotaoVisualizarRisco>
+         <BotaoNovoItem onClick={() => setOpenPopup(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-plus" aria-hidden="true"></i> Novo Risco </BotaoNovoItem>&nbsp;&nbsp;&nbsp;&nbsp;
+         <BotaoEditarItem onClick={() => abrirEditar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-pencil" aria-hidden="true"></i> Editar Risco </BotaoEditarItem>&nbsp;&nbsp;&nbsp;&nbsp;
+         <BotaoDeletarItem onClick={() => abrirDeletar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-trash" aria-hidden="true"></i> Deletar Risco </BotaoDeletarItem>&nbsp;&nbsp;&nbsp;&nbsp;
+         <BotaoVisualizarItem onClick={() => abrirVisualizar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> <i class="fa fa-eye " aria-hidden="true"></i> Visualizar Risco </BotaoVisualizarItem>
                  
          <br/>
          <br/> 

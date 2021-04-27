@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BotaoNovoRisco = styled.button`
+export const BotaoNovoItem = styled.button`
 font-size: 0.9rem;
 padding: 1rem 1rem;
 border: 2px solid green;
@@ -17,7 +17,7 @@ transition: 0.2 ease-out;
 
 `
 
-export const BotaoEditarRisco = styled.button`
+export const BotaoEditarItem = styled.button`
 font-size: 0.9rem;
 padding: 1rem 1rem;
 border: 2px solid #FFB100;
@@ -34,7 +34,7 @@ transition: 0.2 ease-out;
 
 `
 
-export const BotaoVisualizarRisco = styled.button`
+export const BotaoVisualizarItem = styled.button`
 font-size: 0.9rem;
 padding: 1rem 1rem;
 border: 2px solid #303AA6;
@@ -51,7 +51,7 @@ transition: 0.2 ease-out;
 
 `
 
-export const BotaoDeletarRisco = styled.button`
+export const BotaoDeletarItem = styled.button`
 font-size: 0.9rem;
 padding: 1rem 1rem;
 border: 2px solid #DC0006;
