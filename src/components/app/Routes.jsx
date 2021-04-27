@@ -108,7 +108,7 @@ const RoutesApp = (props) => {
     const [mostraMenu, setmostraMenu] = useState(false)
 
     function AbrirMenuDoUsuario() {
-        console.log('teste')
+        
         if(mostraMenu){
             setmostraMenu(false)
         } else{
@@ -117,9 +117,17 @@ const RoutesApp = (props) => {
     
     }
 
+    function FecharMenuDoUsuario() {
+        
+        if(mostraMenu){
+            setmostraMenu(false)
+        }
+    
+    }
+
     return (
         
-        <Container>
+        <Container onClick={() => FecharMenuDoUsuario()}>
             <BrowserRouter>
                 <Route path="/PgLogin">
                     <PgLogin/>
@@ -161,7 +169,7 @@ const RoutesApp = (props) => {
 
                         ?   <DivOpcoesUsuario style={{marginTop: "65px"}}>
 
-                                <Link to={"/"} style={{ textDecoration: "none" }} ><BotaoMenuTopo onClick={() => AbrirMenuDoUsuario()}> &nbsp;&nbsp;&nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Informações Perfil </BotaoMenuTopo></Link>
+                                <Link to={"/"} style={{ textDecoration: "none" }} ><BotaoMenuTopo> &nbsp;&nbsp;&nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Informações Perfil </BotaoMenuTopo></Link>
                                 <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-users fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Minhas Divisões </BotaoMenuMeio>
                                 <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Configurações </BotaoMenuMeio>
                                 <BotaoMenuBase> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Finalizar Seção </BotaoMenuBase>
