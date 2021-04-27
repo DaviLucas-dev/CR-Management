@@ -133,7 +133,7 @@ const RoutesApp = (props) => {
                     <PgLogin/>
                 </Route>
             <Header>
-                <h1><i class="fa fa-exclamation-triangle" aria-hidden="true" style={{color: "#C30006"}}></i> CR - Management</h1>
+                <Link to={"/"} style={{ textDecoration: "none" }} ><h1><i class="fa fa-exclamation-triangle" aria-hidden="true" style={{color: "#C30006"}}></i> CR - Management</h1></Link>
             </Header>
                     <Toolbar>
                         <QualTela/>
