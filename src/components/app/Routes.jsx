@@ -137,10 +137,7 @@ const RoutesApp = (props) => {
             </Header>
                     <Toolbar>
                         <QualTela/>
-
                         <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario onClick={() => AbrirMenuDoUsuario()}><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
-
-                        
                     </Toolbar>
                     <TopNav>
                         <Nav></Nav>
