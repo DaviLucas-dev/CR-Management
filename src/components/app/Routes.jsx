@@ -6,8 +6,8 @@
 
 //----- Bibliotecas React ------
 
-import React from 'react'
-import { Route, Switch, BrowserRouter } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Route, Switch, BrowserRouter, Link } from 'react-router-dom'
 
 //--- Fim Bibliotecas React ----
 
@@ -25,7 +25,8 @@ import TopNav from '../shared/template/TopNav'
 
 //--------- Fim Layout ----------
 
-
+import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario } from '../shared/template/Botoes';
+import { DivUsersMenu, DivOpcoesUsuario } from '../shared/template/Divs'
 
 //----------- Scripts -----------
 
@@ -104,38 +105,74 @@ const QualTela = (props) => {
 
 const RoutesApp = (props) => {
 
+    const [mostraMenu, setmostraMenu] = useState(false)
+
+    function AbrirMenuDoUsuario() {
+        console.log('teste')
+        if(mostraMenu){
+            setmostraMenu(false)
+        } else{
+            setmostraMenu(true)
+        }
+    
+    }
+
     return (
         
         <Container>
+            <BrowserRouter>
+                <Route path="/PgLogin">
+                    <PgLogin/>
+                </Route>
             <Header>
                 <h1><i class="fa fa-exclamation-triangle" aria-hidden="true" style={{color: "#C30006"}}></i> CR - Management</h1>
             </Header>
-            <Toolbar>
-                <QualTela/>
-            </Toolbar>
-            <BrowserRouter>
-                <TopNav>
-                    <Nav></Nav>
-                </TopNav>
-                <SideNav>
-                    <Nav></Nav>
-                </SideNav>
-                <Content>
-            <Switch>
-                <Route path="/PgRiscos">
-                    <PgRiscos />
-                </Route>
-                <Route path="/PgControles">
-                    <PgControles />
-                </Route>
-                <Route path="/PgMeusControles">
-                    <PgMeusControles />
-                </Route>
-                <Route path="/">
-                    <PgInicial />
-                </Route>
-            </Switch>
-        </Content>
+                    <Toolbar>
+                        <QualTela/>
+
+                        <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario onClick={() => AbrirMenuDoUsuario()}><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
+
+                        
+                    </Toolbar>
+                    <TopNav>
+                        <Nav></Nav>
+                    </TopNav>
+                    <SideNav>
+                        <Nav></Nav>
+                    </SideNav>
+                    <Content>
+                        <Switch>
+                            <Route path="/PgRiscos">
+                                <PgRiscos />
+                            </Route>
+                            <Route path="/PgControles">
+                                <PgControles />
+                            </Route>
+                            <Route path="/PgMeusControles">
+                                <PgMeusControles />
+                            </Route>
+                            <Route path="/">  
+                                <PgInicial />
+                            </Route>
+                        </Switch>
+                    </Content>
+
+                    {mostraMenu
+
+                        ?   <DivOpcoesUsuario style={{marginTop: "65px"}}>
+
+                                <Link to={"/"} style={{ textDecoration: "none" }} ><BotaoMenuTopo onClick={() => AbrirMenuDoUsuario()}> &nbsp;&nbsp;&nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Informações Perfil </BotaoMenuTopo></Link>
+                                <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-users fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Minhas Divisões </BotaoMenuMeio>
+                                <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Configurações </BotaoMenuMeio>
+                                <BotaoMenuBase> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Finalizar Seção </BotaoMenuBase>
+
+
+                            </DivOpcoesUsuario>
+
+                        :   <div style={{background: "red"}}></div>
+
+                    }
+
             </BrowserRouter>
 
         </Container>

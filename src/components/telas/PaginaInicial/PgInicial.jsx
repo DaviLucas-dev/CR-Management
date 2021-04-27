@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoControlesAtualizados, BotaoControlesAtualizar, BotaoControlesAtrasados } from '../../shared/template/Botoes';
-import { DivConteudo, DivUsersMenu, DivOpcoesUsuario } from '../../shared/template/Divs'
+import { BotaoControlesAtualizados, BotaoControlesAtualizar, BotaoControlesAtrasados } from '../../shared/template/Botoes';
+import { DivConteudo } from '../../shared/template/Divs'
 
 const PgInicial = (props) => {
     
@@ -11,7 +11,6 @@ const PgInicial = (props) => {
     }
 
     const [carregouItensIniciais, setCarregouItensIniciais] = useState(false)
-    const [mostraMenu, setmostraMenu] = useState(false)
 
     if(!carregouItensIniciais){
 
@@ -21,20 +20,8 @@ const PgInicial = (props) => {
 
     }
 
-    function AbrirMenuDoUsuario() {
-
-        if(mostraMenu){
-            setmostraMenu(false)
-        } else{
-            setmostraMenu(true)
-        }
-    
-    }
-
     return (
         <DivConteudo>
-
-        <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario onClick={() => AbrirMenuDoUsuario(true)}><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
 
             <div id="CardsControles" style={{ width: "100%", height: "27%", backgroundColor:"", display: "flex"}}>
 
@@ -59,23 +46,7 @@ const PgInicial = (props) => {
                     <i style={{float: "right", fontSize: "40px", fontWeight: "bolder"}}>11&nbsp;&nbsp;</i>
                 </BotaoControlesAtrasados>     
 
-            </div>    
-
-            {mostraMenu
-
-                ? <DivOpcoesUsuario style={{marginTop: "-178px"}}>
-
-                    <BotaoMenuTopo> &nbsp;&nbsp;&nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Informações Perfil </BotaoMenuTopo>
-                    <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-users fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Minhas Divisões </BotaoMenuMeio>
-                    <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Configurações </BotaoMenuMeio>
-                    <BotaoMenuBase> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Finalizar Seção </BotaoMenuBase>
-
-
-                </DivOpcoesUsuario>
-
-                : <div style={{background: "red"}}></div>
-
-            }
+            </div>
 
         </DivConteudo>
     )

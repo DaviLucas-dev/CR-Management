@@ -6,8 +6,8 @@ import MuiAlert from '@material-ui/lab/Alert';
 import PopupVisualizarRisco from '../../shared/PopUps/Riscos/PopUpVisualizarRisco';
 import PopupEditarRisco from '../../shared/PopUps/Riscos/PopUpEditarRisco';
 import PopupDeletarRisco from '../../shared/PopUps/Riscos/PopUpDeletarRisco';
-import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario, BotaoNovoItem, BotaoEditarItem, BotaoVisualizarItem, BotaoDeletarItem, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
-import { DivConteudo, DivUsersMenu, DivOpcoesUsuario } from '../../shared/template/Divs'
+import { BotaoNovoItem, BotaoEditarItem, BotaoVisualizarItem, BotaoDeletarItem, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
+import { DivConteudo } from '../../shared/template/Divs'
 import { columnsRiscos, rowsRiscos, testeLoad } from '../../scripts/PaginaRiscos/CarregaTabelaRiscos';
 import { columnsControlesRisco, rowsControlesRiscos } from '../../scripts/PaginaRiscos/CarregaTabelaControlesDoRisco';
 
@@ -71,7 +71,7 @@ const PgRiscos = props => {
 
 //-------------------------------------------- Consts de Controle ---------------------------------
 
-    const [mostraMenu, setmostraMenu] = useState(false)
+
 
 //-------------------------------------------------------------------------------------------------
 
@@ -175,16 +175,6 @@ function abrirEditar() {
         
 }
 
-function AbrirMenuDoUsuario() {
-
-    if(mostraMenu){
-        setmostraMenu(false)
-    } else{
-        setmostraMenu(true)
-    }
-
-}
-
 function abrirDeletar() {
     try {
         
@@ -210,7 +200,6 @@ function abrirDeletar() {
         
         <DivConteudo>
         
-         <DivUsersMenu> <BotaoNotifiUsuario><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></BotaoNotifiUsuario><BotaoPerfilUsuario onClick={() => AbrirMenuDoUsuario(true)}><i class="fa fa-user-circle-o fa-2x" aria-hidden="true" ></i></BotaoPerfilUsuario></DivUsersMenu>
          <BotaoNovoItem onClick={() => setOpenPopup(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-plus" aria-hidden="true"></i> Novo Risco </BotaoNovoItem>&nbsp;&nbsp;&nbsp;&nbsp;
          <BotaoEditarItem onClick={() => abrirEditar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-pencil" aria-hidden="true"></i> Editar Risco </BotaoEditarItem>&nbsp;&nbsp;&nbsp;&nbsp;
          <BotaoDeletarItem onClick={() => abrirDeletar()} style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}><i class="fa fa-trash" aria-hidden="true"></i> Deletar Risco </BotaoDeletarItem>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -222,27 +211,7 @@ function abrirDeletar() {
             <div style={{ height: 450, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
                 <DataGrid rows={rowsRiscos} columns={columnsRiscos} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = e.data} onCellDoubleClick={() => abrirVisualizar()}/>
             </div>
-
-            {mostraMenu
-
-            ? <DivOpcoesUsuario style={{marginTop: "-570px"}}>
-
-                 <BotaoMenuTopo> &nbsp;&nbsp;&nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Informações Perfil </BotaoMenuTopo>
-                 <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-users fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Minhas Divisões </BotaoMenuMeio>
-                 <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Configurações </BotaoMenuMeio>
-                 <BotaoMenuBase> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Finalizar Seção </BotaoMenuBase>
-
-
-             </DivOpcoesUsuario>
-
-            : <div style={{background: "red"}}></div>
-
-            }
-
             
-
-            
-
             <Popup 
                 openPopup={openPopup} 
                 setOpenPopup={setOpenPopup}

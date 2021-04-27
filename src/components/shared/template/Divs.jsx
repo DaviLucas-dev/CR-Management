@@ -13,74 +13,75 @@ position: absolute;
 width: 89px;
 height: 5%;
 cursor: default;
-margin-left: 70%;
-margin-top: -73px;
+margin-left: 74%;
+margin-top: -32px;
+
 display: flex;
 
 @media (max-width: 1250px)
 {
-    margin-left: 69%;
+    margin-left: 73%;
 }
 
 @media (max-width: 1190px)
 {  
-    margin-left: 68%;
+    margin-left: 72%;
 }
 
 @media (max-width: 1130px)
 { 
-    margin-left: 67%;
+    margin-left: 71%;
 }
 
 @media (max-width: 1080px)
 {
-    margin-left: 66%;
+    margin-left: 70%;
 }
 
 @media (max-width: 1060px)
 {
-    margin-left: 65%;
+    margin-left: 69%;
 }
 
 @media (max-width: 1020px)
 {
-    margin-left: 64%;
+    margin-left: 68%;
 }
 
 @media (max-width: 1000px)
 {
-    margin-left: 63%;
+    margin-left: 67%;
 }
 
 @media (max-width: 980px)
 {
-    margin-left: 62%;
+    margin-left: 66%;
 }
 
 @media (max-width: 950px)
 {
-    margin-left: 61%;
+    margin-left: 65%;
 }
 
 @media (max-width: 920px)
 {
     
-    margin-left: 60%;
+    margin-left: 64%;
 }
 
 @media (max-width: 890px)
 {
-    margin-left: 59%;
+    margin-left: 63%;
 }
 
 @media (max-width: 860px)
 {
-    margin-left: 58%;
+    margin-left: 62%;
 }
 
 @media (max-width: 830px)
 {
-    margin-left: 57%;
+    margin-left: 61%;
 }
 
 @media (max-width: 800px)
@@ -140,7 +141,7 @@ export const DivOpcoesUsuario = styled.div`
     color: #fff;
     padding: 20px;
     position: absolute;
-    margin-left: 62%;
+    margin-left: 83.4%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 
     :after{ 
