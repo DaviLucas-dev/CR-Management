@@ -7,6 +7,37 @@ height: 90%;
 
 `
 
+export const DivNomePagina = styled.div`
+
+float: center;
+margin-top: 1%;
+margin-left: 44%;
+font-weight: bold;
+font-size: 20px;
+
+@media (max-width: 749px)
+{
+    margin-top: 1.1%;
+}
+
+@media (max-width: 590px)
+{
+    margin-top: 1.2%;
+}
+
+@media (max-width: 535px)
+{
+    margin-top: 1.3%;
+}
+
+@media (max-width: 520px)
+{
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+`
+
 export const DivUsersMenu = styled.div`
 color: white;
 position: absolute;
@@ -122,7 +153,7 @@ display: flex;
 
 @media (max-width: 490px)
 {
-    margin-left: 75%;
+    margin-left: 67%;
 }
 
 `
@@ -260,7 +291,12 @@ export const DivOpcoesUsuario = styled.div`
 
 @media (max-width: 490px)
 {
-    margin-left: 53%;
+    margin-left: 43%;
+}
+
+@media (max-width: 400px)
+{
+    margin-left: 35%;
 }
 
 `

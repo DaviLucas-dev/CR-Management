@@ -26,7 +26,7 @@ import TopNav from '../shared/template/TopNav'
 //--------- Fim Layout ----------
 
 import { BotaoMenuBase, BotaoMenuMeio, BotaoMenuTopo, BotaoPerfilUsuario, BotaoNotifiUsuario } from '../shared/template/Botoes';
-import { DivUsersMenu, DivOpcoesUsuario } from '../shared/template/Divs'
+import { DivUsersMenu, DivOpcoesUsuario, DivNomePagina } from '../shared/template/Divs'
 
 //----------- Scripts -----------
 
@@ -99,7 +99,7 @@ const QualTela = (props) => {
           break;
       }
  
-    return(<div id="TopNavText" style={{ float: "center", marginTop: "1%", marginLeft: "44%", fontWeight: "bold", fontSize: "20px" }} > {ggwp} </div>)
+    return(<DivNomePagina id="TopNavText"> {ggwp} </DivNomePagina>)
 }
 
 

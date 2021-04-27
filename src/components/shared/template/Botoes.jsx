@@ -8,11 +8,18 @@ border-radius: 50px;
 background: green;
 color: #fff;
 transition: 0.2 ease-out;
+
 &:hover {
     background: #1AAB03;
     transition: 0.2s ease-out;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px)
+{
+    padding: 0.5rem 0.5rem;
+    width: 100%;
 }
 
 `
@@ -25,11 +32,18 @@ border-radius: 50px;
 background: #FFB100;
 color: #fff;
 transition: 0.2 ease-out;
+
 &:hover {
     background: #FFBF00;
     transition: 0.2s ease-out;
     cursor: pointer;
     boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px)
+{
+    padding: 0.5rem 0.5rem;
+    width: 100%;
 }
 
 `
@@ -49,6 +63,12 @@ transition: 0.2 ease-out;
     cursor: pointer;
 }
 
+@media (max-width: 800px)
+{
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+}
+
 `
 
 export const BotaoDeletarItem = styled.button`
@@ -59,11 +79,18 @@ background: #DC0006;
 border-radius: 50px;
 color: #fff;
 transition: 0.2 ease-out;
+
 &:hover {
     background: red;
     transition: 0.2s ease-out;
     cursor: pointer;
     boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px)
+{
+    padding: 0.5rem 0.5rem;
+    width: 100%;
 }
 
 `
