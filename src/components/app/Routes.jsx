@@ -177,7 +177,7 @@ const RoutesApp = (props) => {
 
                             </DivOpcoesUsuario>
 
-                        :   <div style={{background: "red"}}></div>
+                        :   <div style={{background: "#F1F1F1", zIndex: "-1"}}></div>
 
                     }
 

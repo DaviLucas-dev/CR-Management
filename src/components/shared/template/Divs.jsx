@@ -157,4 +157,110 @@ export const DivOpcoesUsuario = styled.div`
         left: 75%;
     }
 
+@media (max-width: 1250px)
+{
+    margin-left: 82.4%;
+}
+
+@media (max-width: 1190px)
+{  
+    margin-left: 81.4%;
+}
+
+@media (max-width: 1130px)
+{ 
+    margin-left: 81.4%;
+}
+
+@media (max-width: 1080px)
+{
+    margin-left: 80.4%;
+}
+
+@media (max-width: 1060px)
+{
+    margin-left: 80%;
+}
+
+@media (max-width: 1020px)
+{
+    margin-left: 79.4%;
+}
+
+@media (max-width: 1000px)
+{
+    margin-left: 79.4%;
+}
+
+@media (max-width: 980px)
+{
+    margin-left: 78.4%;
+}
+
+@media (max-width: 950px)
+{
+    margin-left: 77.4%;
+}
+
+@media (max-width: 920px)
+{
+    margin-left: 77.4%;
+}
+
+@media (max-width: 890px)
+{
+    margin-left: 76.4%;
+}
+
+@media (max-width: 860px)
+{
+    margin-left: 75.4%;
+}
+
+@media (max-width: 830px)
+{
+    margin-left: 74.9%;
+}
+
+@media (max-width: 800px)
+{
+    top: 100px;
+    margin-left: 69%;
+}
+
+@media (max-width: 700px)
+{
+    margin-left: 66%;
+}
+
+@media (max-width: 660px)
+{
+    margin-left: 65%;
+}
+
+@media (max-width: 620px)
+{
+    margin-left: 63%;
+}
+
+@media (max-width: 590px)
+{
+    margin-left: 60%;
+}
+
+@media (max-width: 550px)
+{
+    margin-left: 59%;
+}
+
+@media (max-width: 520px)
+{
+    margin-left: 56%;
+}
+
+@media (max-width: 490px)
+{
+    margin-left: 53%;
+}
+
 `
