@@ -171,7 +171,6 @@ const RoutesApp = (props) => {
                                 <BotaoMenuMeio> &nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Configurações </BotaoMenuMeio>
                                 <BotaoMenuBase> &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Finalizar Seção </BotaoMenuBase>
 
-
                             </DivOpcoesUsuario>
 
                         :   <div style={{background: "#F1F1F1", zIndex: "-1"}}></div>
