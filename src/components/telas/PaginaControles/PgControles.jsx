@@ -271,12 +271,6 @@ const PgControles = props => {
                     <option value="">Médio</option>
                     <option value="">Alto</option>
                 </select><br/><p/>
-                <label for="fname" style={{ fontWeight: "bold"}}>Divisão:</label>&nbsp;&nbsp;
-                <select style={{borderRadius: "30px", width: "302px", height: "25px"}} name="topic" id="divis">
-                    <option value="" selected="selected">Padrão: {divisaoControle}</option>
-                    <option value="">Ger Avia Setor 1</option>
-                    <option value="">Ger Avia Setor 2</option>
-                </select><br/><p/>
                 <br/>
                 
                 <BotaoCriar onClick={() => setOpenPopupEditar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
@@ -289,12 +283,16 @@ const PgControles = props => {
                 openPopupDeletar={openPopupDeletar} 
                 setOpenPopupDeletar={setOpenPopupDeletar}
             >
-                Deletar Controleeeeeeeeeeeeeeeeeeeeeeeee
+                <h4>Tem certeza que voce deseja deletar permanentemente esse controle?</h4>
+                <p/>
+                <h4 style={{textAlign:"center"}} >{nomeControle}</h4>
+                <p/>
+                <p style={{color: "#3885DA"}}><i class="fa fa-info-circle" aria-hidden="true" style={{color: "#3885DA"}}></i> Se você executar a exclusão desse controle, irá resultar na exclusão permanente de todos os apontamentos e historicos desse controle.</p>
                 <br/>
-                <br/>
-                <BotaoCriar onClick={() => setOpenPopupDeletar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
+                <BotaoCancelar style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Deletar </BotaoCancelar>
                 <BotaoCancelar onClick={() => setOpenPopupDeletar(false)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", float: "right"}}> Cancelar </BotaoCancelar>
-
+                <br/>
+                <p/>
             </PopUpDeletarControle>
 
             <PopUpVisualizarControle 
