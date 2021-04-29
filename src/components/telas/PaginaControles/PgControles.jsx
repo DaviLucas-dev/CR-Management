@@ -245,12 +245,44 @@ const PgControles = props => {
                 openPopupEditar={openPopupEditar} 
                 setOpenPopupEditar={setOpenPopupEditar}
             >
-                Editar Controleeeeeeeeeeeeeeeeeeeeeeeee
+                <label for="fname" style={{ fontWeight: "bold"}}>Cód: </label>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "80px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={idControle} /><br/><br/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Controle:</label><br/>
+                <input type="text" id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "361px", height: "25px", textAlign: "center"}} name="NomeRisco" placeholder={nomeControle} /><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Dono do Controle:</label><br/>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "60px", height: "25px", textAlign: "center"}} name="NomeRisco" placeholder="Código" />&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "289px", height: "25px", textAlign: "center"}} name="NomeRisco" placeholder={donoControle} disabled="disabled"/>&nbsp;&nbsp;
+                <BotaoPesquisar><i class="fa fa-search" aria-hidden="true"></i></BotaoPesquisar><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Risco do Controle:</label><br/>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "60px", height: "25px", textAlign: "center"}} name="NomeRisco" placeholder="Código" />&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "289px", height: "25px", textAlign: "center"}} name="NomeRisco" placeholder={riscoControle} disabled="disabled"/>&nbsp;&nbsp;
+                <BotaoPesquisar><i class="fa fa-search" aria-hidden="true"></i></BotaoPesquisar><br/><p/>
+
+                <label for="fname" style={{ fontWeight: "bold"}}>Status:</label>&nbsp;&nbsp;
+                <select style={{borderRadius: "30px", width: "100px", height: "25px"}} name="topic" id="criti">
+                    <option value="" selected="selected">Padrão: {statusControle}</option>
+                    <option value="">Habilitado</option>
+                    <option value="">Desabilitado</option>
+                </select>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;Criticidade:</label>&nbsp;&nbsp;
+                <select style={{borderRadius: "30px", width: "100px", height: "25px"}} name="topic" id="criti">
+                    <option value="" selected="selected">Padrão: {criticidadeControle}</option>
+                    <option value="">Baixo</option>
+                    <option value="">Médio</option>
+                    <option value="">Alto</option>
+                </select><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Divisão:</label>&nbsp;&nbsp;
+                <select style={{borderRadius: "30px", width: "302px", height: "25px"}} name="topic" id="divis">
+                    <option value="" selected="selected">Padrão: {divisaoControle}</option>
+                    <option value="">Ger Avia Setor 1</option>
+                    <option value="">Ger Avia Setor 2</option>
+                </select><br/><p/>
                 <br/>
-                <br/>
+                
                 <BotaoCriar onClick={() => setOpenPopupEditar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
                 <BotaoCancelar onClick={() => setOpenPopupEditar(false)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", float: "right"}}> Cancelar </BotaoCancelar>
-
+                <br/>
+                <p/>
             </PopUpEditarControle>
 
             <PopUpDeletarControle 
