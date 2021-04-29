@@ -129,6 +129,23 @@ transition: 0.2 ease-out;
 
 `
 
+export const BotaoPesquisar = styled.button`
+font-size: 0.9rem;
+padding: 0.3rem 0.4rem;
+border: 2px solid #303AA6;
+border-radius: 50px;
+background: #303AA6;
+color: #fff;
+transition: 0.2 ease-out;
+&:hover {
+    background: #3063A6;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+`
+
 export const BotaoPerfilUsuario = styled.button`
     background: transparent;
     border: 2px solid transparent;

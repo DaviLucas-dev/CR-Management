@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DataGrid, GridFilterToolbarButton, GridColumnsToolbarButton, GridToolbarContainer, GridToolbarExport } from "@material-ui/data-grid";
 import { columnsControlesRisco, rowsControlesRiscos } from '../../scripts/PaginaControles/CarregaTabelaControles'
-import { BotaoNovoItem, BotaoEditarItem, BotaoDeletarItem, BotaoVisualizarItem, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
+import { BotaoPesquisar, BotaoNovoItem, BotaoEditarItem, BotaoDeletarItem, BotaoVisualizarItem, BotaoCriar, BotaoCancelar } from '../../shared/template/Botoes';
 import { DivConteudo } from '../../shared/template/Divs'
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -202,7 +202,36 @@ const PgControles = props => {
                 openPopupNovo={openPopupNovo} 
                 setOpenPopupCriar={setOpenPopupCriar}
             >
-                Novo Controleeeeeeeeeeeeeeeeeeeeeeeee
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Nome do Controle:</label><br/>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "400px", height: "25px"}} name="NomeRisco" placeholder="  Digite o nome do novo risco..." /><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Dono do Controle:</label><br/>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "60px", height: "25px"}} name="NomeRisco" placeholder="  Código" />&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "289px", height: "25px"}} name="NomeRisco" placeholder="  <== Digite o código do usuário para pesquisar" disabled="disabled"/>&nbsp;&nbsp;
+                <BotaoPesquisar><i class="fa fa-search" aria-hidden="true"></i></BotaoPesquisar><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Risco do Controle:</label><br/>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "60px", height: "25px"}} name="NomeRisco" placeholder="  Código" />&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "289px", height: "25px"}} name="NomeRisco" placeholder="  <== Digite o código do risco para pesquisar" disabled="disabled"/>&nbsp;&nbsp;
+                <BotaoPesquisar><i class="fa fa-search" aria-hidden="true"></i></BotaoPesquisar><br/><p/>
+                <label for="lname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Divisão:</label><br/>
+                <select style={{borderRadius: "30px", width: "400px", height: "25px"}} name="topic" id="topic">
+                    <option value="" selected="selected">Selecione uma Divisão...</option>
+                    <option value="">Ger Avia Setor 1</option>
+                    <option value="">Ger Avia Setor 2</option>
+                </select><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;Criticidade:</label>&nbsp;&nbsp;&nbsp;
+                <select style={{borderRadius: "30px", width: "100px", height: "25px"}} name="topic" id="topic">
+                    <option value="" selected="selected">Selecione...</option>
+                    <option value="">Baixa</option>
+                    <option value="">Média</option>
+                    <option value="">Alta</option>
+                </select>
+                <label for="fname" style={{ fontWeight: "bold"}}>&nbsp;&nbsp;&nbsp;&nbsp;Status:</label>&nbsp;&nbsp;&nbsp;
+                <select style={{borderRadius: "30px", width: "100px", height: "25px"}} name="topic" id="topic">
+                    <option value="" selected="selected">Selecione...</option>
+                    <option value="">Habilitado</option>
+                    <option value="">Desabilitado</option>
+                </select>
+                <br/>
                 <br/>
                 <br/>
                 <BotaoCriar onClick={() => setOpenPopupCriar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
