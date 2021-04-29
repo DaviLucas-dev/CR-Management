@@ -294,7 +294,7 @@ export const DivOpcoesUsuario = styled.div`
     margin-left: 43%;
 }
 
-@media (max-width: 400px)
+@media (max-width: 370px)
 {
     margin-left: 35%;
 }

@@ -236,6 +236,8 @@ const PgControles = props => {
                 <br/>
                 <BotaoCriar onClick={() => setOpenPopupCriar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
                 <BotaoCancelar onClick={() => setOpenPopupCriar(false)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", float: "right"}}> Cancelar </BotaoCancelar>
+                <br/>
+                <p/>
 
             </PopUpNovoControle>
 

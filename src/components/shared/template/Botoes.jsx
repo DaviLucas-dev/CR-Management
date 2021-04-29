@@ -261,6 +261,16 @@ cursor: pointer;
 
 }
 
+@media (max-width: 1400px)
+{
+    margin-left: -12.5%;
+}
+
+@media (max-width: 800px)
+{
+    margin-left: -12.5%;
+}
+
 `
 
 export const BotaoMenuMeio = styled.div`
@@ -275,6 +285,16 @@ cursor: pointer;
 
 &:hover {
     background: rgba(214,214,214, 0.5);
+}
+
+@media (max-width: 1400px)
+{
+    margin-left: -12.5%;
+}
+
+@media (max-width: 800px)
+{
+    margin-left: -12.5%;
 }
 
 `
@@ -293,6 +313,16 @@ cursor: pointer;
 
 &:hover {
     background: rgba(255,0,0, 0.5);;
+}
+
+@media (max-width: 1400px)
+{
+    margin-left: -12.5%;
+}
+
+@media (max-width: 800px)
+{
+    margin-left: -12.5%;
 }
 
 `
