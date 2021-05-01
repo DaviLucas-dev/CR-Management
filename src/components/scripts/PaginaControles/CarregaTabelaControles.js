@@ -3,8 +3,8 @@ export const columnsControlesRisco = [
     { field: "controle", headerName: "Controle", width: 200, description: "Nome completo do controle."},
     { field: "donoControle", headerName: "Dono", width: 170, description: "Pessoa responsavel pelo controle." },
     { field: "riscoControle", headerName: "Risco", width: 170, description: "Risco que o controle pertence controle." },
-    { field: "divisaoControle", headerName: "Divisão", width: 170, description: "Risco que o controle pertence controle." },
-    { field: "nivelControle", headerName: "Nível", width: 100, description: "Status do controle." },
+    { field: "divisaoControle", headerName: "Divisão", width: 170, description: "Divisão que o controle pertence." },
+    { field: "nivelControle", headerName: "Criticidade", width: 120, description: "O nivel critico que esse controle pertence." },
     { field: "statusControle", headerName: "Status", width: 170, description: "Status do controle." },
     
   ];
