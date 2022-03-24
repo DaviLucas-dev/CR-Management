@@ -9,6 +9,7 @@ import PopUpNovoControle from '../../shared/PopUps/Controles/PopUpNovoControle';
 import PopUpEditarControle from '../../shared/PopUps/Controles/PopUpEditarControle';
 import PopUpDeletarControle from '../../shared/PopUps/Controles/PopUpDeletarControle';
 import PopUpVisualizarControle from '../../shared/PopUps/Controles/PopUpVisualizarControle';
+import { GRID_DEFAULT_LOCALE_TEXT } from '../../scripts/Geral/traducaoGrid';
 
 const PgControles = props => {
     
@@ -195,7 +196,7 @@ const PgControles = props => {
             <br/> 
 
             <div style={{ height: 450, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
-            <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = e.data} onCellDoubleClick={() => abrirVisualizar()}/>
+            <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} localeText={GRID_DEFAULT_LOCALE_TEXT} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = e.data} onCellDoubleClick={() => abrirVisualizar()}/>
             </div>
 
             <PopUpNovoControle 
@@ -320,7 +321,7 @@ const PgControles = props => {
                 
 
                 <div style={{ height: 250, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
-                    <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} density={'compact'} headerHeight={30} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = JSON.parse(e.data)}/>
+                    <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} localeText={GRID_DEFAULT_LOCALE_TEXT} density={'compact'} headerHeight={30} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = JSON.parse(e.data)}/>
                 </div>
 
                 
