@@ -299,8 +299,33 @@ const PgControles = props => {
                 openPopupVisualizar={openPopupVisualizar} 
                 setOpenPopupVisualizar={setOpenPopupVisualizar}
             >
-                Visualizar Controleeeeeeeeeeeeeeeeeeeeeeeee
-                <br/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Cód: </label>
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "80px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={idControle} /><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Controle:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "340px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={nomeControle} /><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Risco:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "180px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={riscoControle} />&nbsp;&nbsp;
+                <label for="fname" style={{ fontWeight: "bold"}}>Status:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "180px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={statusControle} /><br/><p/>      
+                <label for="fname" style={{ fontWeight: "bold"}}>Dono:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "200px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={donoControle} />&nbsp;&nbsp;  
+                <label for="fname" style={{ fontWeight: "bold"}}>Criticidade:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "100px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={criticidadeControle} /><br/><p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Divisão:</label>&nbsp;&nbsp;
+                <input id="NomeRisco" style={{border: "1.2px solid gray", borderRadius: "30px", width: "226px", height: "25px", textAlign: "center"}} name="NomeRisco" disabled="disabled" value={divisaoControle} /><br/><p/>
+                <p/>
+                <label for="fname" style={{ fontWeight: "bold"}}>Testes de Controle: </label>
+                <p/>
+
+                
+
+                <div style={{ height: 250, width: "100%", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", border: "2px solid #C7C7C7", borderRadius: "8px" }}>
+                    <DataGrid rows={rowsControlesRiscos} columns={columnsControlesRisco} density={'compact'} headerHeight={30} pageSize={5} GridToolbarExport GridFilterForm components={{Toolbar: CustomToolbar,}} onRowSelected={(e) => itemSelecionado = JSON.parse(e.data)}/>
+                </div>
+
+                
+
+                <p/>
                 <br/>
                 <BotaoCriar onClick={() => setOpenPopupVisualizar(true)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}> Criar </BotaoCriar>
                 <BotaoCancelar onClick={() => setOpenPopupVisualizar(false)}  style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", float: "right"}}> Cancelar </BotaoCancelar>
